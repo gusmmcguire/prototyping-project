@@ -1,0 +1,30 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[Serializable]
+public class #REFERENCE_NAME#
+{
+	public bool UseConstant = true;
+	public #TYPE# ConstantValue;
+	public #VARIABLE_NAME# Variable;
+
+	public #REFERENCE_NAME#() { }
+
+	public #REFERENCE_NAME#(#TYPE# value)
+	{
+		UseConstant = true;
+		ConstantValue = value;
+	}
+
+	public #TYPE# Value
+	{
+		get { return UseConstant ? ConstantValue : Variable.Value; }
+	}
+
+	public static implicit operator #TYPE#(#REFERENCE_NAME# reference)
+	{
+		return reference.Value;
+	}
+}

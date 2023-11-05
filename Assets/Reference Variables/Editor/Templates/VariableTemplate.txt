@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu]
+public class #VARIABLE_NAME# : ScriptableObject
+{
+	public float Value;
+
+	public void SetValue(#TYPE# value)
+	{
+		Value = value;
+	}
+
+	public void SetValue(#VARIABLE_NAME# value)
+	{
+		Value = value.Value;
+	}
+
+	public void ApplyChange(#TYPE# amount)
+	{
+		Value += amount;
+	}
+
+	public void ApplyChange(#TYPE# amount)
+	{
+		Value += amount.Value;
+	}
+
+#if UNITY_EDITOR
+	[Multiline] 
+	public string DeveloperDescription = "";
+#endif
+}
