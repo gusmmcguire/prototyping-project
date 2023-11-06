@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "New #TYPE_UPPER# Variable", menuName = "Variables/#TYPE_UPPER#")]
 public class #VARIABLE_NAME# : ScriptableObject
 {
-	public float Value;
+	public #TYPE# Value;
 
 	public void SetValue(#TYPE# value)
 	{
@@ -22,7 +22,7 @@ public class #VARIABLE_NAME# : ScriptableObject
 		Value += amount;
 	}
 
-	public void ApplyChange(#TYPE# amount)
+	public void ApplyChange(#VARIABLE_NAME# amount)
 	{
 		Value += amount.Value;
 	}

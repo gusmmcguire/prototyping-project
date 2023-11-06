@@ -5,4 +5,5 @@ using UnityEngine;
 public class Tester : MonoBehaviour
 {
     [SerializeField] FloatReference test;
+    [SerializeField] IntegerReference test2;
 }
